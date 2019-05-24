@@ -1,11 +1,9 @@
+
 import java.awt.*;
 import java.awt.event.*;
 
 public class Board extends Frame{
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	Board(){
@@ -81,6 +79,12 @@ public class Board extends Frame{
 	public static void main(String args[]) {
 		Board bf = new Board();
 	}
-    
+        
+        public static String[] reset(String[] board){
+            for (int i = 0; i < 9; i++){
+                board[i] = Integer.toString(i+1);
+            }
+            return board;
+    }
     
 }
