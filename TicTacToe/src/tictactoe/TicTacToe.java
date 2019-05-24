@@ -42,6 +42,7 @@ public class TicTacToe {
         if (players == 2){
             System.out.println("Player 1 will be X's\nPlayer 2 will be O's");
             System.out.println("The first turn will go to player " + turn);
+            
             Board bf = new Board();
         
             while (true && turnCounter < 9){
