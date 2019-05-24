@@ -1,9 +1,11 @@
-
 import java.awt.*;
 import java.awt.event.*;
 
 public class Board extends Frame{
-
+	
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 
 	Board(){
@@ -69,12 +71,75 @@ public class Board extends Frame{
 	        //button 1 on press
 	        b1.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		
+	        		//for the set label you need to input a check for which player is going
+	        		b1.setLabel("X");
+	        	}
+	        });
+	        
+	        //button 2 on press
+	        b2.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b2.setLabel("X");
+	        	}
+	        });
+	        
+	        //button 3 on press
+	        b3.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b3.setLabel("X");
+	        	}
+	        });
+	        
+	      //button 4 on press
+	        b4.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b4.setLabel("X");
+	        	}
+	        });
+	        
+	      //button 5 on press
+	        b5.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b5.setLabel("X");
+	        	}
+	        });
+	        
+	      //button 6 on press
+	        b6.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b6.setLabel("X");
+	        	}
+	        });
+	        
+	      //button 7 on press
+	        b7.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b7.setLabel("X");
+	        	}
+	        });
+	        
+	      //button 8 on press
+	        b8.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b8.setLabel("X");
+	        	}
+	        });
+	        
+	      //button 9 on press
+	        b9.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		//for the set label you need to input a check for which player is going
+	        		b9.setLabel("X");
 	        	}
 	        });
 	}
-	
-	
 	
 	public static void main(String args[]) {
 		Board bf = new Board();
@@ -86,5 +151,6 @@ public class Board extends Frame{
             }
             return board;
     }
+	
     
 }
