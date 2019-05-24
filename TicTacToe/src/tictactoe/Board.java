@@ -73,9 +73,10 @@ public class Board extends Frame{
 	        //button 1 on press
 	        b1.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		
+                            
                             TicTacToe.board[0] = TicTacToe.symbol;
                             b1.setLabel(TicTacToe.symbol);
+                            
 	        	}
 	        });
 	        
@@ -83,7 +84,8 @@ public class Board extends Frame{
 	        b2.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		//for the set label you need to input a check for which player is going
-	        		b2.setLabel("X");
+	        		TicTacToe.board[1] = TicTacToe.symbol;
+                            b2.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
@@ -91,7 +93,8 @@ public class Board extends Frame{
 	        b3.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		//for the set label you need to input a check for which player is going
-	        		b3.setLabel("X");
+	        		TicTacToe.board[2] = TicTacToe.symbol;
+                            b3.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
@@ -99,7 +102,8 @@ public class Board extends Frame{
 	        b4.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		//for the set label you need to input a check for which player is going
-	        		b4.setLabel("X");
+	        		TicTacToe.board[3] = TicTacToe.symbol;
+                            b4.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
@@ -107,7 +111,8 @@ public class Board extends Frame{
 	        b5.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		//for the set label you need to input a check for which player is going
-	        		b5.setLabel("X");
+	        		TicTacToe.board[4] = TicTacToe.symbol;
+                            b5.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
@@ -115,15 +120,16 @@ public class Board extends Frame{
 	        b6.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		//for the set label you need to input a check for which player is going
-	        		b6.setLabel("X");
+	        		TicTacToe.board[5] = TicTacToe.symbol;
+                            b6.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
 	      //button 7 on press
 	        b7.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
-	        		b7.setLabel("X");
+	        		TicTacToe.board[6] = TicTacToe.symbol;
+                            b7.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
@@ -131,15 +137,16 @@ public class Board extends Frame{
 	        b8.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		//for the set label you need to input a check for which player is going
-	        		b8.setLabel("X");
+                            TicTacToe.board[7] = TicTacToe.symbol;
+                            b8.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
 	      //button 9 on press
 	        b9.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
-	        		b9.setLabel("X");
+                            TicTacToe.board[8] = TicTacToe.symbol;
+                            b9.setLabel(TicTacToe.symbol);
 	        	}
 	        });
         }
