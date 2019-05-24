@@ -7,6 +7,7 @@ import java.util.*;
 public class TicTacToe {
 
     public static String[] board = new String[9];
+    public static String symbol = "X";
     
     public static void main(String[] args) {
         String input;
@@ -41,7 +42,7 @@ public class TicTacToe {
         if (players == 2){
             System.out.println("Player 1 will be X's\nPlayer 2 will be O's");
             System.out.println("The first turn will go to player " + turn);
-        
+            Board bf = new Board();
         
             while (true && turnCounter < 9){
                 turn(turn);
@@ -112,7 +113,6 @@ public class TicTacToe {
     public static void turn(int player){
         Scanner scan = new Scanner(System.in);
         String input;
-        String symbol;
         
         if (player == 1){
             symbol = "X";
@@ -121,7 +121,7 @@ public class TicTacToe {
         }
         
         while (true){
-            Board.display(board);
+            
             System.out.println("It is Player " + player + " turn. Where would you like to go? ");
             input = scan.nextLine().toLowerCase();
         
@@ -145,7 +145,6 @@ public class TicTacToe {
         
         
     }
-    
     
     public static boolean checkWinConditions(int turn){
         boolean winner = false;
