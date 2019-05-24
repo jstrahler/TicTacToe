@@ -1,3 +1,5 @@
+package tictactoe;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -71,8 +73,9 @@ public class Board extends Frame{
 	        //button 1 on press
 	        b1.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
-	        		b1.setLabel("X");
+	        		
+                            TicTacToe.board[0] = TicTacToe.symbol;
+                            b1.setLabel(TicTacToe.symbol);
 	        	}
 	        });
 	        
@@ -139,11 +142,13 @@ public class Board extends Frame{
 	        		b9.setLabel("X");
 	        	}
 	        });
-	}
+        }
 	
 	public static void main(String args[]) {
 		Board bf = new Board();
 	}
+        
+       
         
         public static String[] reset(String[] board){
             for (int i = 0; i < 9; i++){
