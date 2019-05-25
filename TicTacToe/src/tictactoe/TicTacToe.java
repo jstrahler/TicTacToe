@@ -52,21 +52,14 @@ public class TicTacToe {
             
             
             
-            while (bf.open == true);
-            System.out.print("hi");
+            while (bf.open == true){
+                try{
+                    Thread.sleep(0);
+                } catch (Exception e) {  
+                }
+            }
             bf.dispose();
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+  
         } else {
             System.out.println("Player 1 will be X's\nThe computer will be O's");
             if (turn == 1){
