@@ -9,8 +9,11 @@ public class Board extends Frame{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+        boolean open = true;
+        
+        
 	Board(){
+            
 		 Button b1=new Button(""); 
 		 Button b2=new Button("");
 		 Button b3=new Button("");
@@ -73,80 +76,115 @@ public class Board extends Frame{
 	        //button 1 on press
 	        b1.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-                            
+                            b1.setEnabled(false);
                             TicTacToe.board[0] = TicTacToe.symbol;
-                            b1.setLabel(TicTacToe.symbol);
-                            
+                            TicTacToe.turnCounter++;
+                            b1.setLabel(TicTacToe.board[0]);
+                            TicTacToe.checkWinConditions();
+                            if (TicTacToe.winner == true)
+                                open = false;
 	        	}
 	        });
 	        
 	        //button 2 on press
 	        b2.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
-	        		TicTacToe.board[1] = TicTacToe.symbol;
-                            b2.setLabel(TicTacToe.symbol);
+                            b2.setEnabled(false);
+                            TicTacToe.board[1] = TicTacToe.symbol;
+                            TicTacToe.turnCounter++;
+                            b2.setLabel(TicTacToe.board[1]);
+                            TicTacToe.checkWinConditions();
+                            
+                            
 	        	}
 	        });
 	        
 	        //button 3 on press
 	        b3.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
+	        		b3.setEnabled(false);
 	        		TicTacToe.board[2] = TicTacToe.symbol;
-                            b3.setLabel(TicTacToe.symbol);
+                                
+                                TicTacToe.turnCounter++;
+                            b3.setLabel(TicTacToe.board[2]);
+                            TicTacToe.checkWinConditions();
+                            
 	        	}
 	        });
 	        
 	      //button 4 on press
 	        b4.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
+	        		 b4.setEnabled(false);
 	        		TicTacToe.board[3] = TicTacToe.symbol;
-                            b4.setLabel(TicTacToe.symbol);
+                                
+                                TicTacToe.turnCounter++;
+                            b4.setLabel(TicTacToe.board[3]);
+                            TicTacToe.checkWinConditions();
+                            
 	        	}
 	        });
 	        
 	      //button 5 on press
 	        b5.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
+	        		 b5.setEnabled(false);
 	        		TicTacToe.board[4] = TicTacToe.symbol;
-                            b5.setLabel(TicTacToe.symbol);
+                                
+                                TicTacToe.turnCounter++;
+                            b5.setLabel(TicTacToe.board[4]);
+                            TicTacToe.checkWinConditions();
+                            
 	        	}
 	        });
 	        
 	      //button 6 on press
 	        b6.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
+	        		b6.setEnabled(false);
 	        		TicTacToe.board[5] = TicTacToe.symbol;
-                            b6.setLabel(TicTacToe.symbol);
+                                
+                                TicTacToe.turnCounter++;
+                            b6.setLabel(TicTacToe.board[5]);
+                            TicTacToe.checkWinConditions();
+                            
 	        	}
 	        });
 	        
 	      //button 7 on press
 	        b7.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		TicTacToe.board[6] = TicTacToe.symbol;
-                            b7.setLabel(TicTacToe.symbol);
+                            b7.setEnabled(false);
+                            TicTacToe.board[6] = TicTacToe.symbol;
+                            
+                            TicTacToe.turnCounter++;
+                            b7.setLabel(TicTacToe.board[6]);
+                            TicTacToe.checkWinConditions();
+                            
 	        	}
 	        });
 	        
 	      //button 8 on press
 	        b8.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
-	        		//for the set label you need to input a check for which player is going
+                            b8.setEnabled(false);
                             TicTacToe.board[7] = TicTacToe.symbol;
-                            b8.setLabel(TicTacToe.symbol);
+                            TicTacToe.turnCounter++;
+                            b8.setLabel(TicTacToe.board[7]);
+                            TicTacToe.checkWinConditions();
+                            
 	        	}
 	        });
 	        
 	      //button 9 on press
 	        b9.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
+                            b9.setEnabled(false);
                             TicTacToe.board[8] = TicTacToe.symbol;
-                            b9.setLabel(TicTacToe.symbol);
+                            TicTacToe.turnCounter++;
+                            b9.setLabel(TicTacToe.board[8]);
+                            TicTacToe.checkWinConditions();
+                            
 	        	}
 	        });
         }
