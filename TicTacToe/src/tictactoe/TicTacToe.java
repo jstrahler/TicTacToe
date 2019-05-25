@@ -8,6 +8,9 @@ public class TicTacToe {
 
     public static String[] board = new String[9];
     public static String symbol = "X";
+    public static int turn = 1;
+    public static int turnCounter = 0;
+    public static boolean winner = false;
     
     public static void main(String[] args) {
         String input;
@@ -34,39 +37,35 @@ public class TicTacToe {
     }
     
     public static void play(int players){
-        boolean winner = false;
         Random rand = new Random();
-        int turn = (int)rand.nextInt(2)+1;
-        int turnCounter = 0;
+        turn = (int)rand.nextInt(2)+1;
+        
+        if (turn == 2){
+            flip();
+        }
         
         if (players == 2){
             System.out.println("Player 1 will be X's\nPlayer 2 will be O's");
             System.out.println("The first turn will go to player " + turn);
-            
+
             Board bf = new Board();
-        
-            while (true && turnCounter < 9){
-                turn(turn);
-                winner = checkWinConditions(turn);
-                turnCounter++;
-                if (winner)
-                    break;
-                if (turn == 1){
-                    turn = 2;
-                } else {
-                    turn = 1;
-                }
-            }
             
-            System.out.println("THE WINNER IS PLAYER " +  turn);
             
-            if (turnCounter == 9){
-                System.out.println("Sorry it is a draw");
-            } else if (turn == 2)  {
-                System.out.println("THE WINNER IS PLAYER 2");
-            } else if (turn == 1){
-                System.out.println("THE WINNER IS PLAYER 1");
-            }
+            
+            while (bf.open == true);
+            System.out.print("hi");
+            bf.dispose();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
         } else {
             System.out.println("Player 1 will be X's\nThe computer will be O's");
@@ -79,20 +78,15 @@ public class TicTacToe {
             while (true && turnCounter < 9){
                 
                 if (turn == 1){
-                    turn(turn);
+                    
                 } else {
                     board[Computer.compMove(board)] = "O";
                 }
 
-                winner = checkWinConditions(turn);
+                checkWinConditions();
                 turnCounter++;
                 if (winner)
                     break;
-                if (turn == 1){
-                    turn = 2;
-                } else {
-                    turn = 1;
-                }
             }
             
             if (turnCounter == 9){
@@ -108,54 +102,15 @@ public class TicTacToe {
 
         
         
-        return;
+        
     }
     
-    public static void turn(int player){
-        Scanner scan = new Scanner(System.in);
-        String input;
-        
-        if (player == 1){
-            symbol = "X";
-        } else {
-            symbol = "O";
-        }
-        
-        while (true){
-            
-            System.out.println("It is Player " + player + " turn. Where would you like to go? ");
-            input = scan.nextLine().toLowerCase();
-        
-            label: try{
-                if (Integer.parseInt(input) > 0 && Integer.parseInt(input) < 10){
-                    if (board[Integer.parseInt(input) - 1] == "X" || board[Integer.parseInt(input) - 1] == "O"){
-                        System.out.println("There is already an X or O there...");
-                        break label;
-                    }
-                    board[Integer.parseInt(input) - 1] = symbol;
-                    break;
+    
+    public static void checkWinConditions(){
 
-                } 
-            } catch(Exception e) {
-                System.out.println("Please enter a valid number on the grid...");
-            }
-        }
+        System.out.println(board[0] + board[1] + board[2] + board[3] + board[4] + board[5] + board[6] + board[7] + board[8]);
+        System.out.println(turnCounter);
         
-        return;
-        
-        
-        
-    }
-    
-    public static boolean checkWinConditions(int turn){
-        boolean winner = false;
-        String symbol;
-        if (turn == 1){
-            symbol = "X";
-        } else {
-            symbol = "O";
-        }
-            
         
         if (board[0] == symbol && board[1] == symbol && board[2] == symbol){
             winner = true;
@@ -176,9 +131,35 @@ public class TicTacToe {
         } else {
             winner = false;
         }
-        return winner;
+        
+        if (winner == true || turnCounter == 9)
+            win();
+        
+        flip();
+        
+        return;
     }
     
+    public static void flip(){
+        if (turn == 1){
+            turn = 2;
+            symbol = "O";
+        } else if (turn == 2){
+            turn = 1;
+            symbol = "X";
+        }
+    }
     
+    public static void win(){
+        if (turnCounter == 9){
+                System.out.println("Sorry it is a draw");
+            } else if (turn == 2)  {
+                System.out.println("THE WINNER IS PLAYER 2");
+            } else if (turn == 1){
+                System.out.println("THE WINNER IS PLAYER 1");
+            }
+            
+            
+    }
     
 }
