@@ -7,7 +7,7 @@ import java.util.*;
 public class Computer {
     
     
-    static int diff;
+    static int diff = 1;
     
     public static void difficulty(){
         Scanner scan = new Scanner(System.in);
