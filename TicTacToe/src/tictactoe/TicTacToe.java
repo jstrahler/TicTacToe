@@ -22,7 +22,7 @@ public class TicTacToe {
             input = scan.nextLine().toLowerCase();
             
             if (input.equals("1")){
-                Computer.difficulty();
+                //Computer.difficulty();
                 Board.reset(board);
                 play(Integer.parseInt(input));
                 //break;
@@ -59,6 +59,11 @@ public class TicTacToe {
                 }
             }
             bf.dispose();
+            
+            symbol = "X";
+            turn = 1;
+            turnCounter = 0;
+            winner = false;
   
         } else {
             System.out.println("Player 1 will be X's\nThe computer will be O's");
@@ -140,15 +145,15 @@ public class TicTacToe {
     }
     
     public static void win(){
-        if (turnCounter == 9){
-                System.out.println("Sorry it is a draw");
-            } else if (turn == 2)  {
-                System.out.println("THE WINNER IS PLAYER 2");
-            } else if (turn == 1){
-                System.out.println("THE WINNER IS PLAYER 1");
-            }
-            
-            
+        if (turnCounter == 9 && winner == false){
+            System.out.println("Sorry it is a draw");
+        } else if (turn == 2)  {
+            System.out.println("THE WINNER IS PLAYER 2");
+        } else if (turn == 1){
+            System.out.println("THE WINNER IS PLAYER 1");
+        }
+        
+        
     }
     
 }
