@@ -94,7 +94,8 @@ public class Board extends Frame{
                             TicTacToe.turnCounter++;
                             b2.setLabel(TicTacToe.board[1]);
                             TicTacToe.checkWinConditions();
-                            
+                            if (TicTacToe.winner == true)
+                                open = false;
                             
 	        	}
 	        });
@@ -108,7 +109,8 @@ public class Board extends Frame{
                                 TicTacToe.turnCounter++;
                             b3.setLabel(TicTacToe.board[2]);
                             TicTacToe.checkWinConditions();
-                            
+                            if (TicTacToe.winner == true)
+                                open = false;
 	        	}
 	        });
 	        
@@ -121,7 +123,8 @@ public class Board extends Frame{
                                 TicTacToe.turnCounter++;
                             b4.setLabel(TicTacToe.board[3]);
                             TicTacToe.checkWinConditions();
-                            
+                            if (TicTacToe.winner == true)
+                                open = false;
 	        	}
 	        });
 	        
@@ -134,7 +137,8 @@ public class Board extends Frame{
                                 TicTacToe.turnCounter++;
                             b5.setLabel(TicTacToe.board[4]);
                             TicTacToe.checkWinConditions();
-                            
+                            if (TicTacToe.winner == true)
+                                open = false;
 	        	}
 	        });
 	        
@@ -147,7 +151,8 @@ public class Board extends Frame{
                                 TicTacToe.turnCounter++;
                             b6.setLabel(TicTacToe.board[5]);
                             TicTacToe.checkWinConditions();
-                            
+                            if (TicTacToe.winner == true)
+                                open = false;
 	        	}
 	        });
 	        
@@ -160,7 +165,8 @@ public class Board extends Frame{
                             TicTacToe.turnCounter++;
                             b7.setLabel(TicTacToe.board[6]);
                             TicTacToe.checkWinConditions();
-                            
+                            if (TicTacToe.winner == true)
+                                open = false;
 	        	}
 	        });
 	        
@@ -172,7 +178,8 @@ public class Board extends Frame{
                             TicTacToe.turnCounter++;
                             b8.setLabel(TicTacToe.board[7]);
                             TicTacToe.checkWinConditions();
-                            
+                            if (TicTacToe.winner == true)
+                                open = false;
 	        	}
 	        });
 	        
@@ -184,14 +191,15 @@ public class Board extends Frame{
                             TicTacToe.turnCounter++;
                             b9.setLabel(TicTacToe.board[8]);
                             TicTacToe.checkWinConditions();
+                            if (TicTacToe.winner == true)
+                                open = false;
+                                
                             
 	        	}
 	        });
         }
 	
-	public static void main(String args[]) {
-		Board bf = new Board();
-	}
+	
         
        
         
