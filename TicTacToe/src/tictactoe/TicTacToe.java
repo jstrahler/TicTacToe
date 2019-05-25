@@ -100,10 +100,6 @@ public class TicTacToe {
     
     
     public static void checkWinConditions(){
-
-        System.out.println(board[0] + board[1] + board[2] + board[3] + board[4] + board[5] + board[6] + board[7] + board[8]);
-        System.out.println(turnCounter);
-        
         
         if (board[0] == symbol && board[1] == symbol && board[2] == symbol){
             winner = true;
